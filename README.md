@@ -1,7 +1,3 @@
-# 4ga-supplemental
-supplemental python and data science material for course instruction
-
-
 ## Instructions
 
 1. **Fork the Repository:**
@@ -29,10 +25,9 @@ supplemental python and data science material for course instruction
      ```
     - this will make it easy to get new files as they are added throughout the course
 
-
 ## Keeping Your Fork Updated
 
-To keep your fork updated with the latest changes from the original repository, follow these steps:
+To keep your fork updated with the latest changes from the original repository without overwriting your work, follow these steps:
 
 1. **Fetch the Latest Changes from Upstream:**
    - Fetch the latest changes from the original repository:
@@ -40,24 +35,38 @@ To keep your fork updated with the latest changes from the original repository, 
      git fetch upstream
      ```
 
-2. **Merge the Changes into Your Local Repository:**
-   - Before merging, ensure you are on your main branch:
+2. **Create a New Branch for Merging:**
+   - Create a new branch to merge the changes from upstream:
      ```bash
-     git checkout main
+     git checkout -b merge-upstream
      ```
-   - Merge the changes from the `main` branch of the original repository into your local `main` branch:
+
+3. **Merge the Changes into the New Branch:**
+   - Merge the changes from the `main` branch of the original repository into your new branch:
      ```bash
      git merge upstream/main
      ```
 
-3. **Resolve Any Merge Conflicts:**
+4. **Resolve Any Merge Conflicts:**
    - If there are any merge conflicts, Git will prompt you to resolve them. Open the conflicting files, make the necessary changes, and then commit the resolved files:
      ```bash
      git add <resolved_file>
      git commit
      ```
 
-4. **Push the Updates to Your Fork:**
+5. **Switch Back to Your Main Branch:**
+   - Switch back to your main branch:
+     ```bash
+     git checkout main
+     ```
+
+6. **Merge the New Branch into Your Main Branch:**
+   - Merge the new branch into your main branch:
+     ```bash
+     git merge merge-upstream
+     ```
+
+7. **Push the Updates to Your Fork:**
    - Push the merged changes to your forked repository on GitHub:
      ```bash
      git push origin main
